@@ -4,7 +4,7 @@ import { useOutsideClick } from "./useOutsideClick";
 import { ReactComponent as ResetIcon } from "./assets/delete-forever.svg";
 import { ReactComponent as ExportIcon } from "./assets/download.svg";
 import { ReactComponent as ImportIcon } from "./assets/upload.svg";
-import { ReactComponent as HeartbeatIcon } from "./assets/heart-pulse.svg";
+// import { ResactComponent as HeartbeatIcon } from "./assets/heart-pulse.svg";
 import { ReactComponent as SettingsIcon } from "./assets/cog.svg";
 
 import { Action, ActionType, State } from "./types";
