@@ -51,7 +51,7 @@ button {
 button:hover {
   border: 1px solid #c8f550;
   box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.9);
-  transform: translateY(-2px);
+  /* transform: translateY(-2px); */
 }
 
 button:hover svg {
@@ -72,6 +72,11 @@ button:hover svg {
 .button-delete svg {
   width: 1.5em;
   height: 1.5em;
+}
+
+.group {
+  float: left;
+  margin-right: 2em;
 }
 
 .group-list {
@@ -162,7 +167,7 @@ input[type="text"] {
   margin-right: 1em;
   font-size: 0.7em;
   padding: 4px 12px;
-  top: 3px;
+  top: 5px;
   min-width: 5em;
   text-align: center;
   display: none;
