@@ -1,14 +1,13 @@
 import React, { useReducer } from "react";
 
 import { NewPageForm } from "./NewPageForm";
+import { PageItem } from "./PageItem";
 import { Settings } from "./Settings";
 
 import "./App.css";
 
 import type { Action, State } from "./types";
 import { ActionType } from "./types";
-
-import { ReactComponent as DeleteIcon } from "./assets/delete.svg";
 
 const STORAGE_KEY = "start-page";
 
@@ -74,36 +73,11 @@ function App() {
         {Object.keys(stateGrouped).map(group => {
           return (
             <React.Fragment key={group}>
-              <li>
+              <li className="group">
                 <h5>{group}</h5>
-              </li>
-              <li>
                 <ul className="group-list">
                   {stateGrouped[group].map(page => {
-                    const label = page?.title ?? page.url;
-                    return (
-                      <li key={page.url} className="page">
-                        <a href={page.url} target="_blank" rel="noreferrer">
-                          {label}
-                        </a>
-                        <button
-                          className="button-delete"
-                          onClick={() => {
-                            if (window.confirm(`Delete page "${label}"?`)) {
-                              dispatch({
-                                type: ActionType.Delete,
-                                page: {
-                                  url: page.url,
-                                },
-                              });
-                            }
-                          }}
-                          title={`Delete page ${label}`}
-                        >
-                          <DeleteIcon />
-                        </button>
-                      </li>
-                    );
+                    return <PageItem page={page} dispatch={dispatch} />;
                   })}
                 </ul>
               </li>
