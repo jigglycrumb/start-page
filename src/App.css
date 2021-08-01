@@ -40,16 +40,21 @@ button {
   background: #223508;
   border-radius: 50%;
   border: 1px solid transparent;
+  color: #669f18;
   cursor: pointer;
+  font-weight: bold;
   padding: 6px 6px 4px 6px;
 }
 
-button:hover {
+button:hover,
+button.selected {
   border: 1px solid #c8f550;
   box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.9);
+  color: #c8f550;
 }
 
-button:hover svg {
+button:hover svg,
+button.selected svg {
   fill: #c8f550;
 }
 
@@ -176,7 +181,7 @@ input[type="text"] {
   right: auto;
 }
 
-.tooltip:hover label {
+.tooltip:not(.disabled):hover label {
   display: block;
 }
 
@@ -192,4 +197,23 @@ input[type="text"] {
   line-height: 1.5em;
   min-width: 10em;
   text-align: left;
+}
+
+.settings-heartbeat-wrapper {
+  position: relative;
+}
+
+.settings-heartbeat-interval {
+  position: absolute;
+  right: 100%;
+  top: -2px;
+  width: 131px;
+}
+
+.settings-heartbeat-interval button {
+  margin-right: 0.25em;
+  width: 40px;
+  height: 40px;
+  font-size: 0.6em;
+  padding: 4px;
 }

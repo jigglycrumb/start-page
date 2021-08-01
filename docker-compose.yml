@@ -19,7 +19,6 @@ services:
       - PATH=$PATH:/home/node/.npm-global/bin
     volumes:
       - ./:/home/node/app
-    expose:
-      - "5000"
-    command: "npm install -g nodemon\
-      npm run server"
+    ports:
+      - 5000:5000
+    command: "npm run server"
