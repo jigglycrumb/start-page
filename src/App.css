@@ -36,10 +36,6 @@ a:hover {
   text-decoration: underline;
 }
 
-svg {
-  fill: #669f18;
-}
-
 button {
   background: #223508;
   border-radius: 50%;
@@ -51,7 +47,6 @@ button {
 button:hover {
   border: 1px solid #c8f550;
   box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.9);
-  /* transform: translateY(-2px); */
 }
 
 button:hover svg {
@@ -85,7 +80,7 @@ button:hover svg {
 }
 
 .settings-wrapper {
-  position: absolute;
+  position: fixed;
   top: 8px;
   right: 8px;
 }
@@ -97,10 +92,11 @@ button:hover svg {
 .settings {
   display: flex;
   flex-direction: column;
+  /* color: #f59850; */
 }
 
 .new-page-button {
-  position: absolute;
+  position: fixed;
   bottom: 8px;
   right: 8px;
 }
@@ -156,6 +152,7 @@ input[type="text"] {
 }
 
 .tooltip {
+  display: inline-block;
   position: relative;
 }
 
@@ -171,8 +168,28 @@ input[type="text"] {
   min-width: 5em;
   text-align: center;
   display: none;
+  z-index: 5;
+}
+
+.tooltip label.right {
+  left: 100%;
+  right: auto;
 }
 
 .tooltip:hover label {
   display: block;
+}
+
+.page-status svg {
+  top: 4px;
+  position: relative;
+  margin-right: 0.5em;
+  cursor: help;
+}
+
+.page-status .tooltip label {
+  font-size: 0.5em;
+  line-height: 1.5em;
+  min-width: 10em;
+  text-align: left;
 }

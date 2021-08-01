@@ -77,7 +77,13 @@ function App() {
                 <h5>{group}</h5>
                 <ul className="group-list">
                   {stateGrouped[group].map(page => {
-                    return <PageItem page={page} dispatch={dispatch} />;
+                    return (
+                      <PageItem
+                        key={page.url}
+                        page={page}
+                        dispatch={dispatch}
+                      />
+                    );
                   })}
                 </ul>
               </li>

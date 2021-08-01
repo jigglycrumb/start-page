@@ -31,7 +31,7 @@ export const Settings = ({ dispatch, state }: SettingsProps) => {
           onClick={() => setVisible(true)}
           style={{ opacity: visible ? 0.25 : 1 }}
         >
-          <SettingsIcon width={24} />
+          <SettingsIcon width={24} fill="#669f18" />
         </button>
 
         {visible && (
@@ -44,7 +44,7 @@ export const Settings = ({ dispatch, state }: SettingsProps) => {
                   console.log("heartbeat");
                 }}
               >
-                <HeartbeatIcon width={24} />
+                <HeartbeatIcon width={24} fill="#669f18" />
               </button>
               <label>Heartbeat</label>
             </div> */}
@@ -66,7 +66,7 @@ export const Settings = ({ dispatch, state }: SettingsProps) => {
                   document.body.removeChild(downloadLink);
                 }}
               >
-                <ExportIcon width={24} />
+                <ExportIcon width={24} fill="#669f18" />
               </button>
               <label>Export</label>
             </div>
@@ -79,7 +79,7 @@ export const Settings = ({ dispatch, state }: SettingsProps) => {
                   setImportDialogVisible(true);
                 }}
               >
-                <ImportIcon width={24} />
+                <ImportIcon width={24} fill="#669f18" />
               </button>
               <label>Import</label>
             </div>
@@ -96,7 +96,7 @@ export const Settings = ({ dispatch, state }: SettingsProps) => {
                   }
                 }}
               >
-                <ResetIcon width={24} />
+                <ResetIcon width={24} fill="#669f18" />
               </button>
               <label>Reset</label>
             </div>
